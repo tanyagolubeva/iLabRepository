@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 int find_symbol (char* string, char q);
 
@@ -11,7 +12,7 @@ int main()
     gets (s);
     char q;
     q = getchar();
-    int result = find_symbol (s, q);
+    int result = find_symbol(s, q);
     printf ("%d", result);
     free (s);
     return 0;
@@ -19,7 +20,8 @@ int main()
 
 int find_symbol (char* string, char q)
 {
-    int size = strlen (string);
+    assert(string != NULL);
+    int size = strlen(string);
     int i;
     for (i = 0; i < size; i++)
     {
