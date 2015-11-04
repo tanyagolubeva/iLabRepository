@@ -56,7 +56,7 @@ void add(Stack_n *stack)
 }
 void sub(Stack_n *stack)
 {
-    push(stack,pop(stack)+pop(stack));
+    push(stack,(-1)*(pop(stack)-pop(stack)));
 }
 
 
